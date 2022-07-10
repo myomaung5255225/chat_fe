@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: olone;
+  local: 'Z06-Walone Regular';
+  src: url('./assets/fonts/walone_regular.woff') format('woff');
+  src: url('./assets/fonts/walone_regular.woff2') format('woff2');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: olone;
+  src: url('./assets/fonts/walone.woff') format('woff');
+  src: url('./assets/fonts/walone.woff2') format('woff2');
+  local: 'Z06-Walone Bold';
+  font-style: bold;
+}
+
+* {
+  font-family: olone;
+}
+
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #e6b041 #2b3646;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 4px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #fff;
+}
+
+.loading_indicator:before {
+  content: "";
+  background: #1d8efa54;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.loading_indicator:after {
+  content: url("./assets/spinner.png");
+  position: fixed;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  z-index: 1001;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  @apply animate-spin;
+}
+
+.chat_body{
+  min-height: 90vh;
+  max-height: 90vh;
+}
