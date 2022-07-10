@@ -8,6 +8,7 @@ import {
 import { UnauthenticatedPage } from '../pages/401'
 
 import { LoginPage } from '../pages/login'
+import { RegisterPage } from '../pages/register'
 import { API } from '../services/api'
 import { ProtectedPage } from './protected'
 export const MainRouter: React.FC = () => {
@@ -39,6 +40,7 @@ export const MainRouter: React.FC = () => {
       ) : (
         <Switch>
           <Route path='/' exact component={LoginPage} />
+          <Route path='/signup' exact component={RegisterPage} />
           <Route path='/401' exact component={UnauthenticatedPage} />
           <Redirect to='/401' />
         </Switch>

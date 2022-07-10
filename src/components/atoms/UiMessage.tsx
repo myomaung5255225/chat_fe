@@ -25,7 +25,7 @@ export const UiMessage: React.FC<props> = ({ message }) => {
             <img src={p.src} alt="img" className='w-24 h-24' key={i} />
          ))
         }
-        <span className='text-xs text-yellow-500'>{diffTime() === '0 min' ? 'now' : `${diffTime()}  ago.`} </span>
+        <span className='text-xs text-yellow-500'>{diffTime() === '0.00 min' ? 'now' : `${diffTime()}  ago.`} </span>
       </div>
     </div>
   )

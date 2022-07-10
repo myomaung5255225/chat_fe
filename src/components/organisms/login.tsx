@@ -12,7 +12,7 @@ export const LoginForm: React.FC<props> = ({
   className
 }) => {
   return (
-    <div className={`flex flex-col space-y-3 ${className}`}>
+    <div className={`flex flex-col space-y-3 text-sm ${className}`}>
       <UiInput
         formData={formData}
         inputProps={{
