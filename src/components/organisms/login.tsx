@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { UiButton } from '../atoms/UiButton'
 import { UiInput } from '../atoms/UiInput'
 interface props {
@@ -38,6 +39,11 @@ export const LoginForm: React.FC<props> = ({
       <UiButton buttonProps={{ type: 'submit' }}>
         <span>Login</span>
       </UiButton>
+      <Link to='/signup'>
+        <span>
+          You doesn't have an account.
+        </span>
+      </Link>
     </div>
   )
 }
